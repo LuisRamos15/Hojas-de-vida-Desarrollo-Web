@@ -1,0 +1,90 @@
+/* Estilos básicos para el cuerpo */
+body {
+  font-family: 'Roboto', sans-serif; /* Fuente moderna */
+  background-color: #F0F0F5; /* Color de fondo suave */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: #ffffff; /* Fondo blanco para contraste */
+  padding: 20px; /* Reducido para más compactibilidad */
+  border-radius: 20px; /* Bordes más redondeados */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 700px; /* Ajustado para menos espacio */
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #FF6F61; /* Color vibrante para el título principal */
+  font-size: 2em; /* Tamaño ajustado */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin-bottom: 20px; /* Espaciado ajustado */
+  font-size: 1.1em;
+  color: #666;
+}
+
+.cv-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cv-item {
+  margin: 15px; /* Espacio ajustado */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #FF6F61; /* Borde colorido */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno ajustado */
+  background-color: #F9F9F9; /* Fondo ligero para cada elemento */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.cv-item:hover {
+  transform: scale(1.03); /* Aumenta el tamaño ligeramente al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+  background-color: #FF6F61; /* Color de fondo al pasar el mouse */
+  color: white; /* Cambia el texto a blanco al hacer hover */
+}
+
+.cv-item img {
+  width: 120px; /* Tamaño de imagen reducido */
+  height: 120px; /* Tamaño de imagen reducido */
+  border-radius: 50%; /* Imagen redonda */
+  object-fit: cover;
+  border: 3px solid #FF6F61; /* Borde colorido */
+  margin-bottom: 10px; /* Espaciado ajustado */
+  transition: border 0.3s ease; /* Transición suave */
+}
+
+.cv-item:hover img {
+  border-color: #FF9061; /* Cambia el color del borde al hacer hover */
+}
+
+.cv-item h2 {
+  margin-top: 8px; /* Espaciado ajustado */
+  font-size: 1.2em; /* Tamaño ajustado */
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.cv-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cv-item a:hover h2 {
+  color: #FF9061; /* Cambia el color del texto al pasar el mouse */
+}
