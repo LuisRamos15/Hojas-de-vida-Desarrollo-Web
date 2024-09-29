@@ -9,21 +9,23 @@ body {
   display: flex;
   justify-content: center;
   background-color: #f0f0f0;
+  padding: 20px; /* Asegura un margen en pantallas pequeñas */
 }
 
 .container {
   display: flex;
-  width: 80%;
-  height: 100vh;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
   background-color: #333;
   border-radius: 10px;
   overflow: hidden;
 }
 
-/* Panel Lateral (sidebar) */
 .sidebar {
-  width: 30%;
-  background-color: #FF6F61; /* Naranja Intenso */
+  width: 100%; /* Ancho completo en pantallas pequeñas */
+  background-color: #FF6F61;
   padding: 20px;
   color: white;
   text-align: center;
@@ -58,7 +60,7 @@ h3 {
 
 ul {
   list-style-type: disc;
-  padding-left: 20px; /* Alinea mejor los puntos con el texto */
+  padding-left: 20px;
 }
 
 a {
@@ -66,31 +68,28 @@ a {
   text-decoration: none;
 }
 
-/* Estilos para la Información de Contacto */
 .contact-info {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 10px;
-  color: white;
 }
 
 .contact-info i {
   font-size: 18px;
   margin-right: 10px;
-  color: #2A4D69; /* Azul de la página */
+  color: #2A4D69;
 }
 
-p {
-  color: white;
+.contact-info p {
   margin: 0;
 }
 
-/* Panel Principal (main-content) */
 .main-content {
-  width: 70%;
-  background-color: #2A4D69; /* Azul Oscuro */
+  width: 100%;
+  background-color: #2A4D69;
   color: white;
-  padding: 40px;
+  padding: 20px;
 }
 
 h3 {
@@ -109,7 +108,6 @@ p {
   margin-bottom: 10px;
 }
 
-/* Estilo para el enlace de "Volver a la página principal" */
 .back-to-home {
   margin-top: 30px;
   text-align: center;
@@ -118,7 +116,7 @@ p {
 .back-to-home a {
   display: inline-block;
   padding: 12px 25px;
-  background-color: #FF6F61; /* Naranja Intenso */
+  background-color: #FF6F61;
   color: white;
   font-size: 1.1em;
   font-weight: bold;
@@ -130,8 +128,8 @@ p {
 }
 
 .back-to-home a:hover {
-  background-color: #ff3b2d; /* Cambia a un tono más oscuro al pasar el mouse */
-  transform: translateY(-3px); /* Efecto de levitación */
+  background-color: #ff3b2d;
+  transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -152,30 +150,57 @@ p {
 }
 
 .idioma p {
-  margin-right: 5px; /* Reduce el espacio entre el texto y los círculos */
-  font-size: 14px; /* Tamaño de fuente pequeño */
-  color: white; /* Color de texto en blanco */
+  margin-right: 5px;
+  font-size: 14px;
 }
 
 .circles {
   display: flex;
-  gap: 2px; /* Reduce el espacio entre los círculos */
+  gap: 2px;
 }
 
 .circles span {
   display: inline-block;
-  width: 8px; /* Tamaño de los círculos */
+  width: 8px;
   height: 8px;
   border-radius: 50%;
 }
 
 .filled {
-  background-color: #FF6F61; /* Azul oscuro para los círculos llenos */
+  background-color: #FF6F61;
 }
 
 .empty {
-  background-color: #ADD8E6; /* Azul claro para los círculos vacíos */
+  background-color: #ADD8E6;
 }
 
-  
-  
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Alinea el contenido verticalmente en pantallas pequeñas */
+    height: auto; /* Evita el uso de altura fija */
+  }
+
+  .sidebar, .main-content {
+    width: 100%; /* Asegura que ocupen todo el ancho en pantallas pequeñas */
+    padding: 15px; /* Reduce el padding para pantallas pequeñas */
+  }
+
+  .back-to-home a {
+    padding: 10px 20px; /* Ajusta el tamaño del botón */
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    flex-direction: row; /* En pantallas más grandes, se muestra en fila */
+  }
+
+  .sidebar {
+    width: 30%; /* Sidebar toma el 30% del ancho */
+  }
+
+  .main-content {
+    width: 70%; /* Contenido principal toma el 70% */
+  }
+}
